@@ -1,18 +1,25 @@
+/* src/index.css */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  html,
-  body,
-  #root { /* #root is your React app's main mount point */
-    height: 100%;
-    margin: 0;
-    padding: 0;
-  }
+/* Custom CSS for 3D flip cards - Essential for backface-visibility */
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* For Safari compatibility */
 }
 
-/* Optional: If you want content to always be at least screen height */
+/* Force perspective if Tailwind isn't generating it */
+.perspective-1000 {
+  perspective: 1000px; /* No !important needed here if it's the only rule for this class */
+}
+
+/* Global body styles - Keep if you want these specific font settings */
 body {
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }

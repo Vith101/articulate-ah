@@ -1,7 +1,12 @@
 import React from 'react';
 
-const ServiceCard: React.FC<{ title: string; className?: string}> = ({ title, className}) => (
+const ServiceCard: React.FC<{ title: string; className?: string; imageLink: string}> = ({ title, className, imageLink}) => (
   <div className={"bg-pink-950 text-white p-6 shadow rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100" + className} >
+    <img
+      src={imageLink}
+      alt="Description for landing image 2"
+      className="max-w-full h-auto"
+    />
     <h4 className="text-xl font-semibold mb-2">{title}</h4>
   </div>
 );
@@ -23,11 +28,11 @@ const ServicesSection: React.FC = () => (
         </div>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
-            <div><ServiceCard title="Assessments"/></div>
-            <div><ServiceCard title="Intervention" /></div>
-            <div><ServiceCard title="Preeschool screeners"/></div>
-            <div><ServiceCard title="School readiness programs"/></div>
-            <div className='col-span-2'><ServiceCard title="Speech pathology supervision" className=' text-center'/></div>
+            <div><ServiceCard title="Assessments" imageLink="/assets/assessments.png"/></div>
+            <div><ServiceCard title="Intervention" imageLink="/assets/intervention.png"/></div>
+            <div><ServiceCard title="Preeschool screeners" imageLink="assets/preschool-screeners.png"/></div>
+            <div><ServiceCard title="School readiness programs" imageLink="/assets/school-readiness.png"/></div>
+            <div className='col-span-2'><ServiceCard title="Speech pathology supervision" className=' text-center' imageLink="assets\speech-pathology.png"/></div>
           </div>
         </div>
     </div>

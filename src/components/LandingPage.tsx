@@ -12,7 +12,23 @@ const LandingPage: React.FC = () => (
       </p>
       <div className={`container max-w-sm bg-pink-950 rounded-full mx-auto px-4 py-2 flex justify-center space-x-6`}>
         <Link to="/about" className="text-white px-3 py-1 hover:bg-pink-100 hover:text-black hover:rounded-full">About Us</Link>
-      </div>      
+      </div>
+      <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8"> 
+        <div className="w-full md:w-1/2 flex justify-center"> 
+          <img
+            src='/assets/landing1.png'
+            alt="Description for landing image 1"
+            className="max-w-full h-auto" 
+          />
+        </div>
+        <div className="w-full md:w-1/2 flex justify-center">
+          <img
+            src='/assets/landing2.png'
+            alt="Description for landing image 2"
+            className="max-w-full h-auto"
+          />
+        </div>
+      </div>
     </div>
   </section>
 );
