@@ -7,7 +7,6 @@ import {
 
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
-import StickyNavbar from './components/StickyNavbar';
 import AboutSection from './components/AboutSection';
 import ServicesSection from './components/ServicesSection';
 import ContactSection from './components/ContactSection';
@@ -19,24 +18,25 @@ import WhatHappensNextSection from './components/WhatHappensNextSection';
 const App: React.FC = () => {
   return (
     <Router>
-      <div className="font-sans text-gray-800 h-screen">
+      <div className="flex flex-col font-sans text-gray-800 min-h-screen">
         <Header />
-        <HeroSection />
-        <StickyNavbar />
-        <Routes>
-          <Route path="/about" element={<AboutSection />} />
-          <Route path="/services" element={<ServicesSection />} />
-          <Route path="/fees" element={<div className='py-20 text-center'><h2 className='text-3xl'>Fees & Rebates Page (Coming Soon)</h2></div>} />
-          <Route path="/contact" element={<ContactSection />} />
-          <Route path="/" element={
-            <>
-              <LandingPage />
-              <ServicesSection />
-              <DeliveryModesSection />
-              <WhatHappensNextSection />
-            </>
-          } />
-        </Routes>
+        <main className='bg-pink-100 flex-grow'>
+          <HeroSection />
+          <Routes>
+            <Route path="/about" element={<AboutSection />} />
+            <Route path="/services" element={<ServicesSection />} />
+            <Route path="/fees" element={<div className='py-20 text-center'><h2 className='text-3xl'>Fees & Rebates Page (Coming Soon)</h2></div>} />
+            <Route path="/contact" element={<ContactSection />} />
+            <Route path="/" element={
+              <>
+                <LandingPage />
+                <ServicesSection />
+                <DeliveryModesSection />
+                <WhatHappensNextSection />
+              </>
+            } />
+          </Routes>
+        </main>
         <Footer />
       </div>
     </Router>

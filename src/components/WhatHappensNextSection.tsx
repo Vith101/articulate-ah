@@ -9,7 +9,7 @@ const DeliveryCard: React.FC<{ title: React.ReactNode; desc: string; className?:
 );
 
 const WhatHappensNextSection: React.FC = () => (
-  <section id="services" className="py-20 bg-pink-100">
+  <section id="services" className="py-10 bg-pink-100">
     <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
       <h3 className="text-3xl font-semibold text-center mb-10">What Happens Next?</h3>
       <p className="text-left">

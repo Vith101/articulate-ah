@@ -12,12 +12,15 @@ const ContactSection: React.FC = () => (
         Email: <a href="mailto:info@articulateah.com.au" className="text-blue-600 hover:underline">info@articulateah.com.au</a><br />
         Phone: <a href="tel:+61398123456" className="text-blue-600 hover:underline">+61 3 9812 3456</a>
       </p>
-      <form className="space-y-4">
-        <input className="w-full px-4 py-2 border rounded" type="text" placeholder="Your Name" />
-        <input className="w-full px-4 py-2 border rounded" type="email" placeholder="Your Email" />
-        <textarea className="w-full px-4 py-2 border rounded" rows={4} placeholder="Your Message"></textarea>
-        <button className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700" type="submit">Send</button>
-      </form>
+      <div className="relative max-w-lg h-screen">
+        <iframe 
+          src='https://articulate-allied-health.splose.com/public-form/747b15b1-827b-4164-8424-2457c1edf104'
+          name='embeddableForm'
+          className="absolute top-0 left-0 w-full h-full"
+          loading='lazy'
+          height={'100%'}
+        />
+      </div>
     </div>
   </section>
 );
