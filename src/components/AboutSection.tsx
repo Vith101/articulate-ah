@@ -1,36 +1,34 @@
 import React from 'react';
+import TeamSection from './TeamSection';
 
 const AboutSection: React.FC = () => (
   <section id="about" className="py-10 bg-pink-100 h-full">
-    <h3 className="text-3xl font-semibold text-center mb-10">About Us</h3>
-    <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-      <div className='grid lg:grid-cols-2 gap-16 items-center'>
-            <div className='relative z-1'>
-              <p className="text-left">
-                As a dedicated clinician working in the disability sector for over 5 years, I am passionate about helping individuals and families achieve their therapy goals and increase their participation within the community.
-                As a generalist clinician, I see both paediatric and adult clients. I have areas of expertise in nonverbal communication (AAC device use), language, speech, social communication, and fluency., however am able to support in all areas of communication.
-                I am here to provide personalised and compassionate care, to support families and individuals accessing their community and increasing their ability to communicate wants and needs. I eagerly anticipate the opportunity to work with you as we navigate this journey together.
-                Our dedicated team of speech pathologists is committed to helping individuals of all ages improve their communication skills. We offer personalized assessments and therapy sessions to support speech, language, and communication development.
-              </p>
-            </div>
-            <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <img
-              src="http://articulateah.com.au/staging/Baskaran_Harshi_Default_Pop+Out_Headshot+(2).jpeg"
-              alt="Harshi Baskaran"
-              className="w-48 h-48 mx-auto rounded-full mb-4"
-            />
-            <h4 className="text-xl font-bold mb-2">Harshi Baskaran</h4>
-            <p className="mb-4">
-              Speech and Language Pathologist<br />
-              Mobile Services: East Melbourne Region<br />
-              Telehealth: Australia Wide
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
+     <h3 className="text-3xl font-semibold text-center mb-10">About us</h3>
+     <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+        <p className="mb-4 text-lg leading-relaxed">
+            At Articulate Allied Health, we are passionate about providing high-quality, personalised speech pathology services to individuals of all ages. Based in Melbourne and servicing surrounding suburbs, our practice is dedicated to supporting both paediatric and adult clients across a wide range of communication and swallowing needs.
+        </p>
+        <p className="mb-4 text-lg leading-relaxed">
+            We believe in the power of connection and communication—and that everyone deserves the opportunity to express themselves confidently. Whether it’s supporting a child’s early speech and language development or helping an adult regain communication skills after injury or illness, our experienced team delivers therapy with care, compassion, and clinical excellence.
+        </p>
+        <p className="mb-4 text-lg leading-relaxed">
+            Our services are delivered in community-based settings—including homes, schools, aged care facilities, and other locations where clients feel most comfortable—ensuring therapy is functional, relevant, and empowering.
+        </p>
+        <p className="mb-3 text-lg font-semibold">
+            We are committed to:
+        </p>
+            <ul className="list-disc list-inside space-y-2 mb-4 text-lg leading-relaxed">
+            <li>Tailored, evidence-based therapy for each individual</li>
+            <li>Collaborative care with families, caregivers, and allied health professionals</li>
+            <li>Respectful and inclusive support across all ages and abilities</li>
+            <li>Flexible mobile service delivery throughout Melbourne and nearby suburbs</li>
+            </ul>
+        <p className="text-lg leading-relaxed">
+            Let us support you or your loved one on the journey to clearer, more confident communication.
+        </p>
+     </div>
+    <TeamSection />
   </section>
-);
+)
 
-export default AboutSection;
+export default AboutSection
