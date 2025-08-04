@@ -1,15 +1,5 @@
 import React from 'react';
-
-const ServiceCard: React.FC<{ title: string; className?: string; imageLink: string}> = ({ title, className, imageLink}) => (
-  <div className={"bg-pink-950 text-white p-6 shadow rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-gray-100" + className} >
-    <img
-      src={imageLink}
-      alt="Description for landing image 2"
-      className="max-w-full h-auto"
-    />
-    <h4 className="text-xl font-semibold mb-2">{title}</h4>
-  </div>
-);
+import { HoverCard } from './HoverCard';
 
 const ServicesSection: React.FC = () => (
   <section id="services" className="py-10 bg-pink-100">
@@ -28,11 +18,11 @@ const ServicesSection: React.FC = () => (
         </div>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
-            <div><ServiceCard title="Assessments" imageLink="/assets/assessments.png"/></div>
-            <div><ServiceCard title="Intervention" imageLink="/assets/intervention.png"/></div>
-            <div><ServiceCard title="Preeschool screeners" imageLink="assets/preschool-screeners.png"/></div>
-            <div><ServiceCard title="School readiness programs" imageLink="/assets/school-readiness.png"/></div>
-            <div className='col-span-2'><ServiceCard title="Speech pathology supervision" className=' text-center' imageLink="assets\speech-pathology.png"/></div>
+            <div><HoverCard title="Assessments" imageLink="/assets/assessments.png"/></div>
+            <div><HoverCard title="Intervention" imageLink="/assets/intervention.png"/></div>
+            <div><HoverCard title="Preeschool screeners" imageLink="assets/preschool-screeners.png"/></div>
+            <div><HoverCard title="School readiness programs" imageLink="/assets/school-readiness.png"/></div>
+            <div className='col-span-2'><HoverCard title="Speech pathology supervision" className=' text-center' imageLink="assets\speech-pathology.png"/></div>
           </div>
         </div>
     </div>

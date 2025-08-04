@@ -1,7 +1,9 @@
 import React from 'react';
 import TeamSection from './TeamSection';
+import { ValueSection } from './ValuesSection';
 
 const AboutSection: React.FC = () => (
+    
   <section id="about" className="py-10 bg-pink-100 h-full">
      <h3 className="text-3xl font-semibold text-center mb-10">About us</h3>
      <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -27,6 +29,7 @@ const AboutSection: React.FC = () => (
             Let us support you or your loved one on the journey to clearer, more confident communication.
         </p>
      </div>
+     <ValueSection />
     <TeamSection />
   </section>
 )

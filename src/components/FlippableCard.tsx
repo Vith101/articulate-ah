@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const DeliveryCard: React.FC<{
+const FlipabbleCard: React.FC<{
   title: React.ReactNode;
   desc: string;
   className?: string;
@@ -53,4 +53,4 @@ const DeliveryCard: React.FC<{
   );
 };
 
-export default DeliveryCard;
+export default FlipabbleCard;

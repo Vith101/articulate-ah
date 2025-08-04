@@ -1,7 +1,7 @@
 // src/components/WhatHappensNextSection.tsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-import DeliveryCard from './DeliveryCard';
+import FlipabbleCard from './FlippableCard';
 
 import next1Image from '../../assets/next1.png';
 import next2Image from '../../assets/next2.png';
@@ -16,17 +16,17 @@ const WhatHappensNextSection: React.FC = () => (
         journey with us.
       </p>
       <div className='grid lg:grid-cols-3 gap-8 md:gap-16 items-start mt-10 group'>
-        <DeliveryCard
+        <FlipabbleCard
           imageLink={next1Image} // Use the imported variable here
           title={<>1. Submit an {<Link to="/contact" className='text-blue-300 underline'>enquiry form</Link>}.</>}
           desc='Your journey starts with our simple, online enquiry form. This helps us gather some initial details about your needs.'
         />
-        <DeliveryCard
+        <FlipabbleCard
           imageLink={next2Image} // Use the imported variable here
           title='2. Initial consultation.'
           desc="We'll schedule an initial online consultation. During this session, we'll get to know you, discuss concerns, gather relevant history and explain how we can help."
         />
-        <DeliveryCard
+        <FlipabbleCard
           imageLink={next3Image} // Use the imported variable here
           title='3. Assessment and intervention.'
           desc="Following the consultation we may recommend a formal assessment to better understand strengths and areas for support. Based on the results, we'll create an individualised therapy plan tailored to your goals."
