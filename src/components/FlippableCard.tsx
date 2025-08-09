@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const FlipabbleCard: React.FC<{
   title: React.ReactNode;
-  desc: string;
+  desc: React.ReactNode;
   className?: string;
   imageLink: string;
 }> = ({ title, desc, className, imageLink }) => {
