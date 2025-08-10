@@ -20,6 +20,7 @@ import FeesSection from './components/FeesSection';
 import SupervisionSection from './components/SupervisionSection';
 import PreeschoolSection from './components/PreeschoolSection';
 import PolicySection from './components/PolicySection';
+import FAQs from './components/FAQs';
 
 const App: React.FC = () => {
   return (
@@ -36,6 +37,7 @@ const App: React.FC = () => {
             <Route path="/preschoolScreeners" element={<PreeschoolSection />} />
             <Route path="/policy" element={<PolicySection />} />
             <Route path="/contact" element={<ContactSection />} />
+            <Route path="/faq" element={<FAQs />} />
             <Route path="/" element={
               <>
                 <LandingPage />

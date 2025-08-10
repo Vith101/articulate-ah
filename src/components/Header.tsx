@@ -101,9 +101,8 @@ const Header: React.FC = () => {
             <Link to="/about" className={linkBaseClasses}>About Us</Link>
             <Link to="/services" className={linkBaseClasses}>Services</Link>
             <Link to="/fees" className={linkBaseClasses}>Fees & Rebates</Link>
-            {/* <Link to="/supervision" className={linkBaseClasses}>Supervision</Link>
-            <Link to="/preschoolScreeners" className={linkBaseClasses}>Preeschool Screeners</Link> */}
             <Link to="/policy" className={linkBaseClasses}>Policy</Link>
+            <Link to="/faq" className={linkBaseClasses}>FAQs</Link>
             <Link to="/contact" className={linkBaseClasses}>Contact</Link>
           </div>
         </nav>
@@ -128,9 +127,8 @@ const Header: React.FC = () => {
           <Link to="/about" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>About Us</Link>
           <Link to="/services" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>Services</Link>
           <Link to="/fees" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>Fees & Rebates</Link>
-          {/* <Link to="/supervision"className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>Supervision</Link>
-          <Link to="/preschoolScreeners" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>Preeschool Screeners</Link> */}
           <Link to="/policy" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>Policy</Link>
+          <Link to="/faq" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>FAQs</Link>
           <Link to="/contact" className={mobileLinkClasses} onClick={() => setIsMobileMenuOpen(false)}>Contact</Link>
         </nav>
       </div>
