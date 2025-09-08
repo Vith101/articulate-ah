@@ -4,11 +4,9 @@ FROM node:18-alpine as build-stage
 WORKDIR /app
 
 COPY package.json package-lock.json ./
-RUN npm install --production=false
 
-COPY . .
-
-RUN npm run build
+# Chain install and build to ensure executables are in PATH
+RUN npm install && npm run build
 
 # Stage 2: Serve the application with Nginx
 FROM nginx:alpine as production-stage
