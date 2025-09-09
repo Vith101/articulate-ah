@@ -1,5 +1,4 @@
 import React from 'react';
-import { HoverCard } from './HoverCard';
 import FlipabbleCard from './FlippableCard';
 
 import assessments2 from '../../assets/assessments-2.png';
@@ -23,7 +22,6 @@ const ServicesWeProvideSection: React.FC = () => (
         </div>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-3 md:grid-cols-2 gap-8">
-            {/* <div><HoverCard title="Assessments" imageLink="/assets/assessments.png"/></div> */}
             <FlipabbleCard
                 imageLink={assessments2} // Use the imported variable here
                 title='Assessments'

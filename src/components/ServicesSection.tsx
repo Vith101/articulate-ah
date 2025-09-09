@@ -1,6 +1,12 @@
 import React from 'react';
 import { HoverCard } from './HoverCard';
 
+import assessments from '../../assets/assessments.png';
+import intervention from '../../assets/intervention.png';
+import preschoolScreeners from '../../assets/preschool-screeners.png';
+import schoolReadinessPrograms from '../../assets/school-readiness.png';
+import speechPathology from '../../assets/speech-pathology.png'
+
 const ServicesSection: React.FC = () => (
   <section id="services" className="py-10 bg-pink-100">
     <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
@@ -18,11 +24,11 @@ const ServicesSection: React.FC = () => (
         </div>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-2 md:grid-cols-2 gap-8">
-            <div><HoverCard title="Assessments" imageLink="/assets/assessments.png"/></div>
-            <div><HoverCard title="Intervention" imageLink="/assets/intervention.png"/></div>
-            <div><HoverCard title="Preeschool screeners" imageLink="assets/preschool-screeners.png"/></div>
-            <div><HoverCard title="School readiness programs" imageLink="/assets/school-readiness.png"/></div>
-            <div className='col-span-2'><HoverCard title="Speech pathology supervision" className=' text-center' imageLink="assets\speech-pathology.png"/></div>
+            <div><HoverCard title="Assessments" imageLink={assessments}/></div>
+            <div><HoverCard title="Intervention" imageLink={intervention}/></div>
+            <div><HoverCard title="Preeschool screeners" imageLink={preschoolScreeners}/></div>
+            <div><HoverCard title="School readiness programs" imageLink={schoolReadinessPrograms}/></div>
+            <div className='col-span-2'><HoverCard title="Speech pathology supervision" className=' text-center' imageLink={speechPathology}/></div>
           </div>
         </div>
     </div>

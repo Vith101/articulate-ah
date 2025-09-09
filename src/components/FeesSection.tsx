@@ -1,5 +1,4 @@
 import React from 'react';
-import { HoverCard } from './HoverCard';
 import FlipabbleCard from './FlippableCard';
 
 import next2 from '../../assets/next2.png';

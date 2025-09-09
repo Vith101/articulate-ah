@@ -1,6 +1,5 @@
 // src/components/DeliveryCard.tsx
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const FlipabbleCard: React.FC<{
   title: React.ReactNode;
