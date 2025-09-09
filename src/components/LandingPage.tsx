@@ -1,6 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import landing1 from "../../assets/landing1.png"
+import landing2 from "../../assets/landing2.png"
+
 const LandingPage: React.FC = () => (
   <section id="contact" className="py-20 bg-pink-100">
     <div className="container mx-auto px-4 max-w-7xl">
@@ -16,14 +19,14 @@ const LandingPage: React.FC = () => (
       <div className="mt-16 flex flex-col md:flex-row items-center justify-center gap-8"> 
         <div className="w-full md:w-1/2 flex justify-center"> 
           <img
-            src='/assets/landing1.png'
+            src={landing1}
             alt="Description for landing image 1"
             className="max-w-full h-auto" 
           />
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src='/assets/landing2.png'
+            src={landing2}
             alt="Description for landing image 2"
             className="max-w-full h-auto"
           />
