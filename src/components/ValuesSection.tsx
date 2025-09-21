@@ -1,5 +1,4 @@
 import { HoverCard } from "./HoverCard";
-
 import values from "../../assets/values.png"
 
 export const ValueSection: React.FC = () => (
@@ -25,9 +24,9 @@ export const ValueSection: React.FC = () => (
                 {/* Middle Column: A single image spanning all three rows */}
                 <div className="flex-1 rounded-2xl">
                     <img
-                    src={values}
-                    alt="A placeholder image spanning all three rows"
-                    className="w-full h-full object-cover"
+                        src={values}
+                        alt="A placeholder image spanning all three rows"
+                        className="w-full h-full object-cover"
                     />
                 </div>
 

@@ -1,11 +1,15 @@
 import React from 'react';
+import heroImage from "../../assets/hero-image.png";
 
 const HeroSection: React.FC = () => (
   <section id="hero" className="bg-pink-100 py-10 text-center">
-    <h2 className="text-4xl font-bold mb-4">Helping You Find Your Voice</h2>
-    <p className="text-lg max-w-xl mx-auto">
-      Expert speech pathology services to support your communication needs.
-    </p>
+    <div className='flex-1 rounded-2xl max-w-7xl mx-auto flex items-center justify-center'>
+      <img
+          src={heroImage}
+          alt="A placeholder image spanning all three rows"
+          className="w-full h-full object-cover"
+      />
+    </div>
   </section>
 );
 
