@@ -8,8 +8,8 @@ const FAQs: React.FC = () => (
         <h3 className="text-3xl font-semibold text-center mb-10">FAQs</h3>
         <div className="container max-w-7xl mx-auto px-4 pb-8">
             <FAQDropDown
-            question="1. What is speech pathology?"
-            answer="Speech pathology supports people of all ages with communication, language, speech, social skills, voice, and swallowing difficulties. We help individuals speak clearly, understand and express language, interact socially, and eat and drink safely."     
+            question="1. What is Speech Pathology?"
+            answer="Speech Pathology supports people of all ages with communication, language, speech, social skills, voice, and swallowing difficulties. We help individuals speak clearly, understand and express language, interact socially, and eat and drink safely."     
             />
             <FAQDropDown
             question="2. Who do you work with?"
@@ -29,7 +29,7 @@ const FAQs: React.FC = () => (
             />
             <FAQDropDown
             question="6. Where do sessions take place?"
-            answer="We offer flexible options, including clinic-based, telehealth, and home or school visits (location dependent). Our therapy spaces are warm, calm, and sensory-aware."
+            answer="We offer flexible options, including telehealth and home or school visits (location dependent)."
             />
             <FAQDropDown
             question="7. How long are the sessions?"
@@ -45,7 +45,7 @@ const FAQs: React.FC = () => (
             />
             <FAQDropDown
             question="10. Can I claim a rebate through my private health insurance?"
-            answer="Yes. If your policy includes extras cover for speech pathology, you may be eligible for a rebate. You’ll need to pay the full invoice upfront, and then claim the rebate directly through your private health fund using the receipt we provide. We recommend checking with your insurer about your specific level of cover."
+            answer="Yes. If your policy includes extras cover for Speech Pathology, you may be eligible for a rebate. You’ll need to pay the full invoice upfront, and then claim the rebate directly through your private health fund using the receipt we provide. We recommend checking with your insurer about your specific level of cover."
             />
             <FAQDropDown
             question="11. Can I claim a Medicare rebate for speech therapy?"

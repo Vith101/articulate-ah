@@ -21,6 +21,11 @@ import SupervisionSection from './components/SupervisionSection';
 import PreeschoolSection from './components/PreeschoolSection';
 import PolicySection from './components/PolicySection';
 import FAQs from './components/FAQs';
+import CancellationPolicy from './components/CancellationPolicy';
+import PaymentPolicy from './components/PaymentPolicy';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsAndConditions from './components/TermsAndConditions';
+import ZeroTolerance from './components/ZeroTolerance';
 
 const App: React.FC = () => {
   return (
@@ -34,8 +39,13 @@ const App: React.FC = () => {
             <Route path="/services" element={<ServicesPage />} />
             <Route path="/fees" element={<FeesSection />} />
             <Route path="/supervision" element={<SupervisionSection />} />
-            <Route path="/preschoolScreeners" element={<PreeschoolSection />} />
+            <Route path="/preschool-screeners" element={<PreeschoolSection />} />
             <Route path="/policy" element={<PolicySection />} />
+            <Route path="/policy/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/policy/cancellation-policy" element={<CancellationPolicy />} />
+            <Route path="/policy/payment-policy" element={<PaymentPolicy />} />
+            <Route path="/policy/zero-tolerance" element={<ZeroTolerance />} />
+            <Route path="/policy/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/contact" element={<ContactSection />} />
             <Route path="/faq" element={<FAQs />} />
             <Route path="/" element={

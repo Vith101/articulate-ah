@@ -13,7 +13,7 @@ const PrivacyPolicy: React.FC = () => (
         <div>
           <h2 className="text-2xl font-semibold text-black mb-3">1. What Information We Collect</h2>
           <p className="text-gray-700">
-            We collect personal and health-related information to provide high-quality speech pathology services. This may include:
+            We collect personal and health-related information to provide high-quality Speech Pathology services. This may include:
           </p>
           <ul className="list-disc pl-5 text-gray-700 space-y-2">
             <li>Name, contact details, date of birth</li>

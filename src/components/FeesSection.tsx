@@ -17,7 +17,7 @@ const FeesSection: React.FC = () => (
       <h3 className="text-3xl font-semibold text-center mb-10">Fees and Rebates</h3>
       <h4 className="text-2xl font-semibold text-center mb-10">Our Fees</h4>
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             {/* <div><HoverCard title="Assessments" imageLink="/assets/assessments.png"/></div> */}
             <FlipabbleCard
                 imageLink={next2} // Use the imported variable here
@@ -32,7 +32,7 @@ const FeesSection: React.FC = () => (
             <FlipabbleCard
                 imageLink={interventionSession} // Use the imported variable here
                 title='Intervention Session'
-                desc={<>15 minute session planning.{<br />}50 minute session.{<br />}10 minute clinical case notes. {<br />}$242.48</>}
+                desc={<>15 minute session planning.{<br />}45 minute session.{<br />}15 minute clinical case notes. {<br />}$242.48</>}
             />
             <FlipabbleCard
                 imageLink={itp} // Use the imported variable here

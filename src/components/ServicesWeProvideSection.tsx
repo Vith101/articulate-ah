@@ -16,12 +16,12 @@ const ServicesWeProvideSection: React.FC = () => (
       <h3 className="text-3xl font-semibold text-center mb-10">Services we provide</h3>
         <div className="container max-w-7xl mx-auto px-4 pb-8">
           <p className="text-left">
-            At Articulate Allied Health, we offer a wide range of speech pathology services to support both children and adults in the Melbourne community. 
+            At Articulate Allied Health, we offer a wide range of Speech Pathology services to support both children and adults in the Melbourne community. 
             Whether you’re concerned about your child’s early development or looking for support with communication challenges, we’re here to help every step of the way.
           </p>
         </div>
         <div className="container max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-3 md:grid-cols-2 gap-8">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
             <FlipabbleCard
                 imageLink={assessments2} // Use the imported variable here
                 title='Assessments'

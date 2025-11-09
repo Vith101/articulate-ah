@@ -10,7 +10,7 @@ const LandingPage: React.FC = () => (
       <h3 className="text-3xl font-semibold text-center mb-8">Empowering communication across every stage of life</h3>
       <p className="text-center mb-8">
         At Articulate Allied Health, we are passionate about helping individuals of all ages find their voice and
-        thrive in their daily lives. Our dedicated team of speech pathologists offers personalised, evidence-based 
+        thrive in their daily lives. Our dedicated team of Speech Pathologists offers personalised, evidence-based 
         therapy for both adults and children, delivered in the environments where our clients live, learn, work and play.
       </p>
       <div className={`container max-w-sm bg-pink-950 rounded-full mx-auto px-4 py-2 flex justify-center space-x-6`}>

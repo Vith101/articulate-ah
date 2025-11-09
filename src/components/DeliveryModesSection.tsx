@@ -1,5 +1,5 @@
 import React from 'react';
-import { HoverCard } from './HoverCard';
+import { ContentCard } from './ContentCard';
 import telehealth from '../../assets/telehealth.png';
 import communityBased from '../../assets/community-based.png';
 
@@ -16,10 +16,18 @@ const DeliveryModesSection: React.FC = () => (
       <div className="container max-w-7xl mx-auto px-4">
         <div className='grid lg:grid-cols-2 gap-16 items-center'>
           <div className="container max-w-7xl mx-auto px-4">
-            <HoverCard title='Telehealth' imageLink={telehealth}/>
+            <ContentCard
+              variant="hover"
+              title="Telehealth"
+              imageLink={telehealth}
+            />
           </div>
           <div className="container max-w-7xl mx-auto px-4">
-            <HoverCard title='Community-based' imageLink={communityBased}/>
+            <ContentCard
+              variant="hover"
+              title="Community-based"
+              imageLink={communityBased}
+            />
           </div>
         </div>
       </div>
