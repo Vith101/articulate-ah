@@ -34,7 +34,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({
     return (
       <div 
         className={`
-          bg-pink-300 text-gray-800 p-6 shadow-xl rounded-lg 
+          bg-rose-100 text-gray-800 p-6 shadow-xl rounded-lg 
           transition-all duration-300 ease-in-out
           hover:shadow-2xl hover:border-pink-500 hover:-translate-y-1 
           border border-pink-200 h-full ${className}

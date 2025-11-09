@@ -1,5 +1,5 @@
 import React from 'react';
-import FlipabbleCard from './FlippableCard';
+import { ContentCard } from './ContentCard';
 
 import assessments2 from '../../assets/assessments-2.png';
 import languageDevelopment from '../../assets/language-development.png';
@@ -22,42 +22,50 @@ const ServicesWeProvideSection: React.FC = () => (
         </div>
         <div className="container max-w-7xl mx-auto px-4">
           <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-8">
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={assessments2} // Use the imported variable here
                 title='Assessments'
                 desc='Thorough and personalised assessments to understand your unique needs. This helps us identify strengths and areas for growth, so we can tailor the best therapy plan for you or your loved one.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={languageDevelopment} // Use the imported variable here
                 title='Language Development'
                 desc='From building vocabulary to understanding grammar and sentence structure, we assist children and adults in developing strong language skills for everyday life.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={articulate} // Use the imported variable here
                 title='Articulation'
                 desc='If your child or adult is having trouble pronouncing sounds clearly, we provide targeted therapy to improve speech clarity and confidence.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={literacyReadingWriting} // Use the imported variable here
                 title='Literacy, Reading and Writing'
                 desc='Speech and language skills form the foundation for literacy. We provide support for reading, writing, and language development to boost confidence and academic success.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={socialCommunication} // Use the imported variable here
                 title='Social Communication'
                 desc='Effective communication is about more than just words. We help improve skills like understanding social cues, taking turns in conversation, and expressing thoughts clearly.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={swallowing} // Use the imported variable here
                 title='Swallowing'
                 desc='Difficulty swallowing can affect health and quality of life. Our specialised swallowing assessments and therapy ensure safe and comfortable eating and drinking.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={fluency} // Use the imported variable here
                 title='Fluency'
                 desc='We support individuals experiencing stuttering or other fluency challenges with strategies to enhance smooth, effective communication.'
             />
-            <FlipabbleCard
+            <ContentCard
+                variant='flip'
                 imageLink={preschoolAndSchoolReadiness} // Use the imported variable here
                 title='Preschool Screeners and School Readiness Programs'
                 desc='We offer early screening to identify any speech or language difficulties in young children. Our school readiness programs help prepare little ones for success in their first years of school by building essential communication and social skills.'

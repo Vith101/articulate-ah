@@ -1,5 +1,5 @@
-import { HoverCard } from "./HoverCard";
 import values from "../../assets/values.png"
+import { ContentCard } from "./ContentCard";
 
 export const ValueSection: React.FC = () => (
     <section id="Values" className="py-10 bg-pink-100">
@@ -17,13 +17,13 @@ export const ValueSection: React.FC = () => (
                     {/* Takes full width on mobile, 1/3 width on large screens. Uses vertical spacing on mobile. */}
                     <div className="flex flex-col space-y-4 lg:space-y-0 lg:justify-between w-full lg:w-1/3">
                         <div className="">
-                            <HoverCard title="Compassionate Care" body="We listen closely and support you with kindness, understanding that everyone's journey is different."/>
+                            <ContentCard variant="hover" title="Compassionate Care" body="We listen closely and support you with kindness, understanding that everyone's journey is different." />
                         </div>
                         <div>
-                            <HoverCard title="A Holistic Approcah" body="Your speech and communcation are connected to many parts of your life. We consider your physical health, emotions, environment and goals to create therapy that truly works for you."/>
+                            <ContentCard variant="hover" title="A Holistic Approcah" body="Your speech and communcation are connected to many parts of your life. We consider your physical health, emotions, environment and goals to create therapy that truly works for you."/>
                         </div>
                         <div>
-                            <HoverCard title="Evidence-Based Practice" body="Our therapy is backed by the latest research and best practices, so you get the most effective care possible."/>
+                            <ContentCard variant="hover" title="Evidence-Based Practice" body="Our therapy is backed by the latest research and best practices, so you get the most effective care possible."/>
                         </div>
                     </div>
 
@@ -41,13 +41,13 @@ export const ValueSection: React.FC = () => (
                     {/* Takes full width on mobile, 1/3 width on large screens. Uses vertical spacing on mobile. */}
                     <div className="flex flex-col space-y-4 lg:space-y-0 lg:justify-between w-full lg:w-1/3">
                         <div>
-                            <HoverCard title="Working Together" body="We see you, your family and your support network as partners. Together, we set goals that are meaningful and achievable."/>
+                            <ContentCard variant="hover" title="Working Together" body="We see you, your family and your support network as partners. Together, we set goals that are meaningful and achievable."/>
                         </div>
                         <div>
-                            <HoverCard title="Always Learning" body="Our team keeps up with the newest knowledge and skills, so you benefit from the best in Speech Pathology and holistic health."/>
+                            <ContentCard variant="hover"  title="Always Learning" body="Our team keeps up with the newest knowledge and skills, so you benefit from the best in Speech Pathology and holistic health."/>
                         </div>
                         <div>
-                            <HoverCard title="Respect and Inclusivity" body="Everyone is valued here. We celebrate diversity and create a safe space for all backgrounds, cultures and abilities."/>
+                            <ContentCard variant="hover"  title="Respect and Inclusivity" body="Everyone is valued here. We celebrate diversity and create a safe space for all backgrounds, cultures and abilities."/>
                         </div>
                     </div>
 

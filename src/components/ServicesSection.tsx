@@ -1,5 +1,5 @@
 import React from 'react';
-import { HoverCard } from './HoverCard';
+import { ContentCard } from './ContentCard';
 
 import assessments from '../../assets/assessments.png';
 import intervention from '../../assets/intervention.png';
@@ -24,13 +24,20 @@ const ServicesSection: React.FC = () => (
       </div>
       <div className="container max-w-7xl mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="container max-w-7xl mx-auto px-4"><HoverCard title="Assessments" imageLink={assessments}/></div>
-          <div><HoverCard title="Intervention" imageLink={intervention}/></div>
-          <div><HoverCard title="Preeschool screeners" imageLink={preschoolScreeners}/></div>
-          <div><HoverCard title="School readiness programs" imageLink={schoolReadinessPrograms}/></div>
-          {/* MODIFIED: The col-span-2 class is now prefixed with 'lg:' */}
+          <div className="container max-w-7xl mx-auto px-4">
+            <ContentCard variant="hover" title="Assessments" imageLink={assessments} />
+          </div>
+          <div>
+            <ContentCard variant="hover" title="Intervention" imageLink={intervention} />
+          </div>
+          <div>
+            <ContentCard variant="hover" title="Preeschool screeners" imageLink={preschoolScreeners} />
+            </div>
+          <div>
+            <ContentCard variant="hover" title="School readiness programs" imageLink={schoolReadinessPrograms} />
+          </div>
           <div className='lg:col-span-2'>
-              <HoverCard title="Speech Pathology supervision" className=' text-center' imageLink={speechPathology}/>
+              <ContentCard variant="hover" title="Speech Pathology supervision" className='text-center' imageLink={speechPathology} />
           </div>
         </div>
       </div>
