@@ -26,6 +26,7 @@ import PaymentPolicy from './components/PaymentPolicy';
 import PrivacyPolicy from './components/PrivacyPolicy';
 import TermsAndConditions from './components/TermsAndConditions';
 import ZeroTolerance from './components/ZeroTolerance';
+import { Reveal } from './components/Reveal';
 
 const App: React.FC = () => {
   return (
@@ -50,13 +51,21 @@ const App: React.FC = () => {
             <Route path="/faq" element={<FAQs />} />
             <Route path="/" element={
               <>
-                <LandingPage />
-                <ServicesSection />
-                <div className={`container max-w-sm bg-pink-950 rounded-full mx-auto px-4 py-2 flex justify-center space-x-6`}>
-                  <Link to="/services" className="text-white px-3 py-1 hover:bg-pink-100 hover:text-black hover:rounded-full">Our services</Link>
-                </div>
-                <DeliveryModesSection />
-                <WhatHappensNextSection />
+                <Reveal>
+                  <LandingPage />
+                </Reveal>
+                <Reveal>
+                  <ServicesSection />
+                  <div className={`container max-w-sm bg-pink-950 rounded-full mx-auto px-4 py-2 flex justify-center space-x-6`}>
+                    <Link to="/services" className="text-white px-3 py-1 hover:bg-pink-100 hover:text-black hover:rounded-full">Our services</Link>
+                  </div>
+                </Reveal>  
+                <Reveal>
+                  <DeliveryModesSection />
+                </Reveal>
+                <Reveal>
+                  <WhatHappensNextSection />
+                </Reveal>
               </>
             } />
           </Routes>

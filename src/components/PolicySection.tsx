@@ -4,15 +4,26 @@ import CancellationPolicy from "./CancellationPolicy"
 import PaymentPolicy from "./PaymentPolicy"
 import ZeroTolerance from "./ZeroTolerance"
 import PrivacyPolicy from "./PrivacyPolicy"
+import { Reveal } from "./Reveal"
 
 const PolicySection: React.FC = () => (
      <section id="policies" className="py-20 bg-pink-100">
+        <Reveal>
           <TermsAndConditions />
+        </Reveal>
+        <Reveal>
           <CancellationPolicy />
+        </Reveal>
+        <Reveal>
           <PaymentPolicy />
+        </Reveal>
+        <Reveal>
           <ZeroTolerance />
+        </Reveal>
+        <Reveal>
           <PrivacyPolicy />
-          
+        </Reveal>
+        <Reveal>
         <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className="text-3xl font-bold text-gray-800 mb-6 text-center">After hours contact</h1>
           <div className="space-y-8">
@@ -65,6 +76,7 @@ const PolicySection: React.FC = () => (
         </div>
         </div>
       </div>
+      </Reveal>
      </section>
 )
 

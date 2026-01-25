@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
 
 type ContentCardProps = {
   // Common Props
@@ -66,11 +67,11 @@ export const ContentCard: React.FC<ContentCardProps> = ({
           [transform-style:preserve-3d]
           transition-transform duration-700 ease-in-out
           rounded-lg shadow-lg
-          border-4 border-pink-600  /* Distinct, thicker border */
+          border-4 border-pink-600
           hover:[transform:rotateY(180deg)]
         `}
       >
-        {/* Front Face: Dark background retained */}
+        {/* Front Face */}
         <div 
           className={`
             absolute w-full h-full
@@ -80,6 +81,12 @@ export const ContentCard: React.FC<ContentCardProps> = ({
             flex flex-col items-center justify-center
           `}
         >
+          {/* --- Added Icon Here --- */}
+          <div className="absolute top-4 right-4 text-pink-500/70 group-hover:opacity-0 transition-opacity">
+            <ArrowPathIcon className="w-6 h-6" />
+          </div>
+          {/* ------------------------ */}
+
           <img
             src={finalImageLink}
             alt={`${typeof title === 'string' ? title : 'Delivery step'} illustration`}
@@ -88,7 +95,7 @@ export const ContentCard: React.FC<ContentCardProps> = ({
           <h4 className="text-xl font-semibold text-center mt-auto">{title}</h4>
         </div>
 
-        {/* Back Face: Still dark */}
+        {/* Back Face */}
         <div 
           className={`
             absolute w-full h-full
