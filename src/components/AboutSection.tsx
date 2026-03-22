@@ -10,7 +10,7 @@ const AboutSection: React.FC = () => (
                 <h3 className="text-3xl font-semibold text-center mb-10">About us</h3>
                 <div className='relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
                     <p className="mb-4 text-lg leading-relaxed">
-                        At Articulate Allied Health, we are passionate about providing high-quality, personalised Speech Pathology services to individuals of all ages. Based in Melbourne and servicing surrounding suburbs, our practice is dedicated to supporting both paediatric and adult clients across a wide range of communication and swallowing needs.
+                        At Articulate Allied Health, we are passionate about providing high-quality, personalised Speech Pathology services to individuals of all ages. Based in Geelong, Melbourne and servicing surrounding suburbs, our practice is dedicated to supporting both paediatric and adult clients across a wide range of communication and swallowing needs.
                     </p>
                     <p className="mb-4 text-lg leading-relaxed">
                         We believe in the power of connection and communication—and that everyone deserves the opportunity to express themselves confidently. Whether it’s supporting a child’s early speech and language development or helping an adult regain communication skills after injury or illness, our experienced team delivers therapy with care, compassion, and clinical excellence.

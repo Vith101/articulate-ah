@@ -3,7 +3,7 @@ import { ContentCard } from './ContentCard';
 
 import assessments2 from '../../assets/assessments-2.png';
 import languageDevelopment from '../../assets/language-development.png';
-import articulate from '../../assets/language-development.png';
+import articulate from '../../assets/articulation.png';
 import literacyReadingWriting from '../../assets/literacy-reading-writing.png';
 import socialCommunication from '../../assets/social-communication.png';
 import swallowing from '../../assets/swallowing.png';

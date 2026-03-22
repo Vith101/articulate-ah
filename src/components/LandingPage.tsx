@@ -21,14 +21,14 @@ const LandingPage: React.FC = () => (
           <img
             src={landing1}
             alt="Description for landing image 1"
-            className="max-w-full h-auto" 
+            className="max-w-full max-h-[350px]" 
           />
         </div>
         <div className="w-full md:w-1/2 flex justify-center">
           <img
             src={landing2}
             alt="Description for landing image 2"
-            className="max-w-full h-auto"
+            className="max-w-full max-h-[350px]"
           />
         </div>
       </div>

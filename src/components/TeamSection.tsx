@@ -1,4 +1,5 @@
 import React from 'react';
+import headshot from '../../assets/headshot.png'
 
 const TeamSection: React.FC = () => (
   <section id="team" className="py-10 bg-pink-100 h-full">
@@ -23,9 +24,9 @@ const TeamSection: React.FC = () => (
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <img
-              src="http://articulateah.com.au/staging/Baskaran_Harshi_Default_Pop+Out_Headshot+(2).jpeg"
+              src={headshot}
               alt="Harshini Baskaran"
-              className="w-48 h-48 mx-auto rounded-full mb-4"
+              className="max-w-48 mx-auto mb-4"
             />
             <p className="mb-4 text-lg leading-relaxed">
               Harshini holds a Master&#39;s in Speech and Language Pathology and has extensive expertise in various specialised areas. She is proficient in AAC device application and implementation, 
