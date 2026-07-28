@@ -4,18 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom CSS for 3D flip cards - Essential for backface-visibility */
-.backface-hidden {
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; /* For Safari compatibility */
-}
-
-/* Force perspective if Tailwind isn't generating it */
-.perspective-1000 {
-  perspective: 1000px; /* No !important needed here if it's the only rule for this class */
-}
-
-/* Global body styles - Keep if you want these specific font settings */
+/* Global body styles */
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
