@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown, Menu, X } from 'lucide-react';
+import { useContactModal } from '../../context/ContactModalContext';
 
 const Header: React.FC = () => {
+  const { open: openContactModal } = useContactModal();
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesSubMenuOpen, setIsServicesSubMenuOpen] = useState(false);
@@ -28,7 +30,7 @@ const Header: React.FC = () => {
   // Toggles one mobile accordion open while collapsing the other.
   const toggleSubMenu =
     (isOpen: boolean, setOpen: (open: boolean) => void, closeOther: (open: boolean) => void) =>
-    (e: React.MouseEvent<HTMLAnchorElement>) => {
+    (e: React.MouseEvent<HTMLElement>) => {
       if (!isOpen) {
         e.preventDefault();
         setOpen(true);
@@ -138,10 +140,14 @@ const Header: React.FC = () => {
 
             {/* CONTACT DROPDOWN */}
             <div className="relative group flex items-center">
-              <Link to="/contact" className={linkBaseClasses + ' flex items-center'}>
+              <button
+                type="button"
+                onClick={openContactModal}
+                className={linkBaseClasses + ' flex items-center'}
+              >
                 Contact
                 <ChevronDown className="w-4 h-4 ml-1 transform group-hover:rotate-180 transition-transform duration-150" />
-              </Link>
+              </button>
               <div className="absolute top-full left-1/2 -translate-x-1/2 mt-0 pt-2 w-40 hidden group-hover:block z-10">
                 <div className="bg-white text-pink-950 rounded-xl shadow-2xl overflow-hidden ring-1 ring-pink-200">
                   <Link to="/faq" className={subLinkClasses}>
@@ -190,11 +196,25 @@ const Header: React.FC = () => {
 
           {/* CONTACT ACCORDION */}
           <div className="w-full">
-            <Link to="/contact" onClick={handleContactClickMobile} className={mobileLinkClasses + ' flex justify-center items-center'}>
+            <button
+              type="button"
+              onClick={handleContactClickMobile}
+              className={mobileLinkClasses + ' flex justify-center items-center'}
+            >
               Contact
               <ChevronDown className={`w-4 h-4 ml-2 transition-transform duration-300 ${isContactSubMenuOpen ? 'rotate-180' : ''}`} />
-            </Link>
+            </button>
             <div className={accordionTransitionClasses(isContactSubMenuOpen)}>
+              <button
+                type="button"
+                className={mobileSubLinkClasses}
+                onClick={() => {
+                  closeMenus();
+                  openContactModal();
+                }}
+              >
+                Enquiry Form
+              </button>
               <Link to="/faq" className={mobileSubLinkClasses} onClick={closeMenus}>
                 FAQs
               </Link>

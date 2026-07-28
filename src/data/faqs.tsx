@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ContactLink } from '../components/ui/ContactLink';
 
 export interface Faq {
   question: React.ReactNode;
@@ -67,9 +67,9 @@ export const faqs: Faq[] = [
     answer: (
       <>
         You can contact us via our online{' '}
-        <Link to="/contact" className="text-blue-300 underline">
+        <ContactLink className="text-blue-300 underline">
           enquiry form
-        </Link>
+        </ContactLink>
         , email, or call us directly. We’ll guide you through the process.
       </>
     ),

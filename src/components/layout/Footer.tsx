@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, ExternalLink } from 'lucide-react';
 import { policyLinks } from '../../data/navigation';
+import { ContactLink } from '../ui/ContactLink';
 
 const footerLinkClasses = 'text-pink-200 hover:text-pink-50 transition duration-200 text-sm';
 const footerHeadingClasses =
@@ -27,9 +28,9 @@ const Footer: React.FC = () => (
           <div className="col-span-2 sm:col-span-1 flex flex-col items-start md:items-end">
             <h4 className={footerHeadingClasses}>Support</h4>
             <nav className="flex flex-col space-y-2 items-start md:items-end">
-              <Link to="/contact" className={footerLinkClasses}>
+              <ContactLink className={footerLinkClasses + ' text-left md:text-right'}>
                 Contact Us
-              </Link>
+              </ContactLink>
               <Link to="/faq" className={footerLinkClasses}>
                 FAQs
               </Link>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { ContactLink } from '../components/ui/ContactLink';
 
 import assessments from '../../assets/assessments.png';
 import intervention from '../../assets/intervention.png';
@@ -53,9 +53,9 @@ export const whatHappensNext: ServiceCard[] = [
     title: (
       <>
         1. Submit an{' '}
-        <Link to="/contact" className="text-blue-300 underline">
+        <ContactLink className="text-blue-300 underline">
           enquiry form
-        </Link>
+        </ContactLink>
         .
       </>
     ),
