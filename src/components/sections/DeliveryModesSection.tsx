@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section, Container, SectionHeading } from '../ui/Section';
 import { ContentCard } from '../ui/ContentCard';
+import { Stagger, StaggerItem } from '../ui/Reveal';
 import { deliveryModes } from '../../data/services';
 
 const DeliveryModesSection: React.FC = () => (
@@ -14,13 +15,13 @@ const DeliveryModesSection: React.FC = () => (
         </p>
       </div>
       <div className="container max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        <Stagger className="grid lg:grid-cols-2 gap-16 items-center">
           {deliveryModes.map((mode) => (
-            <div key={String(mode.title)} className="container max-w-7xl mx-auto px-4">
+            <StaggerItem key={String(mode.title)} className="container max-w-7xl mx-auto px-4">
               <ContentCard variant="hover" title={mode.title} imageLink={mode.image} />
-            </div>
+            </StaggerItem>
           ))}
-        </div>
+        </Stagger>
       </div>
     </Container>
   </Section>

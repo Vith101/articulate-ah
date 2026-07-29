@@ -1,6 +1,7 @@
 import React from 'react';
 import { Section, Container, SectionHeading } from '../ui/Section';
 import { ContentCard } from '../ui/ContentCard';
+import { Stagger, StaggerItem } from '../ui/Reveal';
 import { homeServices, supervisionHighlight } from '../../data/services';
 
 const ServicesSection: React.FC = () => (
@@ -17,20 +18,22 @@ const ServicesSection: React.FC = () => (
         </p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <Stagger className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {homeServices.map((service) => (
-          <ContentCard key={String(service.title)} variant="hover" title={service.title} imageLink={service.image} />
+          <StaggerItem key={String(service.title)}>
+            <ContentCard variant="hover" title={service.title} imageLink={service.image} />
+          </StaggerItem>
         ))}
 
-        <div className="lg:col-span-2">
+        <StaggerItem className="lg:col-span-2">
           <ContentCard
             variant="hover"
             title={supervisionHighlight.title}
             imageLink={supervisionHighlight.image}
             className="text-center"
           />
-        </div>
-      </div>
+        </StaggerItem>
+      </Stagger>
     </Container>
   </Section>
 );

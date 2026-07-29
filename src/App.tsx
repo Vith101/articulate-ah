@@ -8,7 +8,9 @@ import { Reveal } from './components/ui/Reveal';
 import { PillLink } from './components/ui/PillLink';
 import PageTransition from './components/ui/PageTransition';
 import ContactModal from './components/ui/ContactModal';
+import SmoothScroll from './components/ui/SmoothScroll';
 import { ContactModalProvider } from './context/ContactModalContext';
+import { scrollToTop } from './lib/lenis';
 
 import HeroSection from './components/sections/HeroSection';
 import LandingPage from './components/sections/LandingPage';
@@ -47,7 +49,7 @@ const AnimatedRoutes: React.FC = () => {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
+    <AnimatePresence mode="wait" onExitComplete={scrollToTop}>
       <PageTransition key={location.pathname}>
         <Routes location={location}>
           <Route path="/about" element={<AboutSection />} />
@@ -68,6 +70,7 @@ const AnimatedRoutes: React.FC = () => {
 const App: React.FC = () => (
   <Router>
     <ContactModalProvider>
+      <SmoothScroll />
       <div className="flex flex-col font-sans text-gray-800 min-h-screen">
         <Header />
         <main className="bg-pink-100 flex-grow">
