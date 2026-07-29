@@ -1,79 +1,87 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
 
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import AboutSection from './components/AboutSection';
-import ServicesSection from './components/ServicesSection';
-import ContactSection from './components/ContactSection';
-import LandingPage from './components/LandingPage';
-import Footer from './components/Footer';
-import DeliveryModesSection from './components/DeliveryModesSection';
-import WhatHappensNextSection from './components/WhatHappensNextSection';
-import ServicesPage from './components/ServicesPage';
-import FeesSection from './components/FeesSection';
-import SupervisionSection from './components/SupervisionSection';
-import PreeschoolSection from './components/PreeschoolSection';
-import PolicySection from './components/PolicySection';
-import FAQs from './components/FAQs';
-import CancellationPolicy from './components/CancellationPolicy';
-import PaymentPolicy from './components/PaymentPolicy';
-import PrivacyPolicy from './components/PrivacyPolicy';
-import TermsAndConditions from './components/TermsAndConditions';
-import ZeroTolerance from './components/ZeroTolerance';
-import { Reveal } from './components/Reveal';
+import Header from './components/layout/Header';
+import Footer from './components/layout/Footer';
+import { Reveal } from './components/ui/Reveal';
+import { PillLink } from './components/ui/PillLink';
+import PageTransition from './components/ui/PageTransition';
+import ContactModal from './components/ui/ContactModal';
+import SmoothScroll from './components/ui/SmoothScroll';
+import { ContactModalProvider } from './context/ContactModalContext';
+import { scrollToTop } from './lib/lenis';
 
-const App: React.FC = () => {
+import HeroSection from './components/sections/HeroSection';
+import LandingPage from './components/sections/LandingPage';
+import ServicesSection from './components/sections/ServicesSection';
+import DeliveryModesSection from './components/sections/DeliveryModesSection';
+import WhatHappensNextSection from './components/sections/WhatHappensNextSection';
+
+import AboutSection from './components/pages/AboutSection';
+import ServicesPage from './components/pages/ServicesPage';
+import FeesSection from './components/pages/FeesSection';
+import SupervisionSection from './components/pages/SupervisionSection';
+import PreeschoolSection from './components/pages/PreeschoolSection';
+import FAQs from './components/pages/FAQs';
+import PolicySection from './components/pages/PolicySection';
+import PolicyPage from './components/pages/PolicyPage';
+
+const HomePage: React.FC = () => (
+  <>
+    <Reveal>
+      <LandingPage />
+    </Reveal>
+    <Reveal>
+      <ServicesSection />
+      <PillLink to="/services">Our services</PillLink>
+    </Reveal>
+    <Reveal>
+      <DeliveryModesSection />
+    </Reveal>
+    <Reveal>
+      <WhatHappensNextSection />
+    </Reveal>
+  </>
+);
+
+const AnimatedRoutes: React.FC = () => {
+  const location = useLocation();
+
   return (
-    <Router>
+    <AnimatePresence mode="wait" onExitComplete={scrollToTop}>
+      <PageTransition key={location.pathname}>
+        <Routes location={location}>
+          <Route path="/about" element={<AboutSection />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/fees" element={<FeesSection />} />
+          <Route path="/supervision" element={<SupervisionSection />} />
+          <Route path="/preschool-screeners" element={<PreeschoolSection />} />
+          <Route path="/policy" element={<PolicySection />} />
+          <Route path="/policy/:slug" element={<PolicyPage />} />
+          <Route path="/faq" element={<FAQs />} />
+          <Route path="/" element={<HomePage />} />
+        </Routes>
+      </PageTransition>
+    </AnimatePresence>
+  );
+};
+
+const App: React.FC = () => (
+  <Router>
+    <ContactModalProvider>
+      <SmoothScroll />
       <div className="flex flex-col font-sans text-gray-800 min-h-screen">
         <Header />
-        <main className='bg-pink-100 flex-grow'>
+        <main className="bg-pink-100 flex-grow">
           <HeroSection />
-          <Routes>
-            <Route path="/about" element={<AboutSection />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/fees" element={<FeesSection />} />
-            <Route path="/supervision" element={<SupervisionSection />} />
-            <Route path="/preschool-screeners" element={<PreeschoolSection />} />
-            <Route path="/policy" element={<PolicySection />} />
-            <Route path="/policy/terms-and-conditions" element={<TermsAndConditions />} />
-            <Route path="/policy/cancellation-policy" element={<CancellationPolicy />} />
-            <Route path="/policy/payment-policy" element={<PaymentPolicy />} />
-            <Route path="/policy/zero-tolerance" element={<ZeroTolerance />} />
-            <Route path="/policy/privacy-policy" element={<PrivacyPolicy />} />
-            <Route path="/contact" element={<ContactSection />} />
-            <Route path="/faq" element={<FAQs />} />
-            <Route path="/" element={
-              <>
-                <Reveal>
-                  <LandingPage />
-                </Reveal>
-                <Reveal>
-                  <ServicesSection />
-                  <div className={`container max-w-sm bg-pink-950 rounded-full mx-auto px-4 py-2 flex justify-center space-x-6`}>
-                    <Link to="/services" className="text-white px-3 py-1 hover:bg-pink-100 hover:text-black hover:rounded-full">Our services</Link>
-                  </div>
-                </Reveal>  
-                <Reveal>
-                  <DeliveryModesSection />
-                </Reveal>
-                <Reveal>
-                  <WhatHappensNextSection />
-                </Reveal>
-              </>
-            } />
-          </Routes>
+          <AnimatedRoutes />
         </main>
         <Footer />
       </div>
-    </Router>
-  );
-};
+      <ContactModal />
+    </ContactModalProvider>
+  </Router>
+);
 
 export default App;
