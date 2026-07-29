@@ -1,59 +1,107 @@
-# articulate-ah
+# Articulate Allied Health
 
-This is a React project bootstrapped with Vite.
+Marketing and information website for **Articulate Allied Health**, a speech pathology
+practice offering personalised, evidence-based therapy for children and adults —
+delivered where clients live, learn, work, and play.
 
-## Project Structure
+The site presents the practice's services, fees, clinical supervision offerings,
+preschool screeners, team, FAQs, and policy documents, with animated page
+transitions and smooth momentum scrolling.
 
-The project follows a standard React application structure. Key technologies used include:
+## Tech stack
 
-* **React**: A JavaScript library for building user interfaces.
-* **Vite**: A fast build tool that provides a lightning-fast development experience.
-* **React Router DOM**: For declarative routing in React applications.
-* **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
-* **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
-* **Autoprefixer** and **PostCSS**: For processing CSS.
+- **React 18** + **TypeScript** — UI
+- **Vite 4** — dev server & build
+- **React Router DOM 7** — client-side routing (SPA)
+- **Tailwind CSS 3** — styling (with PostCSS + Autoprefixer)
+- **Framer Motion** — page transitions and reveal-on-scroll animations
+- **Lenis** — smooth / momentum scrolling
+- **Heroicons** & **lucide-react** — icons
 
-## Getting Started
-
-Follow these instructions to get a development instance of the project up and running on your local machine.
+## Getting started
 
 ### Prerequisites
 
-Before you begin, ensure you have the following installed:
+- **Node.js 18+** (the Docker and Nixpacks builds pin Node 18)
+- **npm**
 
-* **Node.js**: It is recommended to use the latest LTS (Long Term Support) version. You can download it from [nodejs.org](https://nodejs.org/).
-* **npm** (Node Package Manager) or **Yarn**: These are package managers for JavaScript. npm is installed automatically with Node.js.
-
-### Installation
-
-1.  **Clone the repository:**
-
-    ```bash
-    git clone <repository-url>
-    cd articulate-ah
-    ```
-
-    (Replace `<repository-url>` with the actual URL of your Git repository.)
-
-2.  **Install dependencies:**
-
-    Using npm:
-
-    ```bash
-    npm install
-    ```
-
-    Or using Yarn:
-
-    ```bash
-    yarn install
-    ```
-
-### Running the Development Server
-
-Once the dependencies are installed, you can start the development server:
-
-Using npm:
+### Install & run
 
 ```bash
-npm run dev
+npm install     # install dependencies
+npm run dev     # start the Vite dev server (http://localhost:5173)
+```
+
+### Available scripts
+
+| Script            | Description                                  |
+| ----------------- | -------------------------------------------- |
+| `npm run dev`     | Start the local dev server with HMR          |
+| `npm run build`   | Type-aware production build to `dist/`        |
+| `npm run preview` | Serve the production build locally to verify |
+
+## Project structure
+
+```
+src/
+├── main.tsx              # App entry point
+├── App.tsx               # Router, providers, and page layout
+├── index.css             # Global styles / Tailwind directives
+├── components/
+│   ├── layout/           # Header, Footer (site chrome)
+│   ├── sections/         # Home-page sections (Hero, Landing, Services, …)
+│   ├── pages/            # Standalone routed pages (About, Fees, FAQs, …)
+│   └── ui/               # Reusable UI (Section, Reveal, PillLink,
+│                         #   ContactModal, PageTransition, SmoothScroll, …)
+├── context/
+│   └── ContactModalContext.tsx   # Global contact-modal state
+├── data/                 # Content/data layer, separated from presentation
+│   ├── navigation.ts     # Nav + footer policy links
+│   ├── services.tsx      # Services offered
+│   ├── fees.tsx          # Fee schedule
+│   ├── policies.tsx      # Policy document content
+│   ├── team.tsx          # Team members
+│   ├── supervision.ts    # Clinical supervision
+│   ├── preschool.ts      # Preschool screeners
+│   ├── faqs.tsx          # FAQ entries
+│   └── values.ts         # Practice values
+└── lib/
+    ├── lenis.ts          # Smooth-scroll setup + scrollToTop helper
+    └── motion.ts         # Shared Framer Motion variants
+```
+
+Site content lives in `src/data/` so copy can be edited without touching the
+components that render it.
+
+### Routes
+
+| Path                    | Page                                    |
+| ----------------------- | --------------------------------------- |
+| `/`                     | Home (hero + landing + services + more) |
+| `/about`                | About the practice                      |
+| `/services`             | Services we provide                     |
+| `/fees`                 | Fees                                    |
+| `/supervision`          | Clinical supervision                    |
+| `/preschool-screeners`  | Preschool screeners                     |
+| `/faq`                  | Frequently asked questions              |
+| `/policy`               | Policy index                            |
+| `/policy/:slug`         | Individual policy document              |
+
+## Deployment
+
+The app builds to a static SPA in `dist/`. Because routing is client-side, the
+host must rewrite unknown paths to `index.html`:
+
+- **Cloudflare Pages** — handled by `public/_redirects` (`/* /index.html 200`).
+- **Docker / Nginx** — the multi-stage `Dockerfile` builds the app and serves
+  `dist/` with Nginx (`nginx.conf` includes the SPA fallback). Build and run:
+
+  ```bash
+  docker build -t articulate-ah .
+  docker run -p 8080:80 articulate-ah
+  ```
+
+- **Nixpacks** — `nixpacks.toml` runs `npm install && npm run build` for
+  platforms that build from source (e.g. Railway).
+
+> `dist/` is generated and not committed — build it as part of deployment.
