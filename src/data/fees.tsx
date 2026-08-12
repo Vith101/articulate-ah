@@ -88,7 +88,7 @@ export const rebates: FeeCard[] = [
   {
     title: 'National Disablility Insurance Scheme (NDIS)',
     image: ndis,
-    desc: 'Our services are availlable to self-managed and plan-managed clients',
+    desc: 'Our services are available to self-managed and plan-managed clients',
   },
   {
     title: 'Chronic Disease Management Plan (CDMP)',
