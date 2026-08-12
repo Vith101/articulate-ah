@@ -2,6 +2,7 @@ import React from 'react';
 import { Section, Container, SectionHeading } from '../ui/Section';
 import { Reveal } from '../ui/Reveal';
 import { BulletList } from '../ui/BulletList';
+import { GetStartedCTA } from '../ui/GetStartedCTA';
 import { supportAreas, supervisionFor, whatToExpect, whyMatters } from '../../data/supervision';
 import supervision1 from '../../../assets/supervision-1.png';
 import supervision2 from '../../../assets/supervision-2.png';
@@ -116,6 +117,13 @@ const SupervisionSection: React.FC = () => (
             <SupervisionImage src={supervision3} />
           </div>
         </div>
+      </Reveal>
+
+      <Reveal>
+        <GetStartedCTA
+          heading="Ready to get started?"
+          body="Get in touch to book a supervision session or ask us anything — we’d love to support your clinical journey."
+        />
       </Reveal>
     </Container>
   </Section>

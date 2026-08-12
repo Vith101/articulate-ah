@@ -2,6 +2,7 @@ import React from 'react';
 import { Reveal } from '../ui/Reveal';
 import TeamSection from '../sections/TeamSection';
 import ValuesSection from '../sections/ValuesSection';
+import CareersSection from '../sections/CareersSection';
 
 const AboutSection: React.FC = () => (
   <section id="about" className="py-10 bg-pink-100 h-full">
@@ -34,6 +35,9 @@ const AboutSection: React.FC = () => (
     </Reveal>
     <Reveal>
       <TeamSection />
+    </Reveal>
+    <Reveal>
+      <CareersSection />
     </Reveal>
   </section>
 );

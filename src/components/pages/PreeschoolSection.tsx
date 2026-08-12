@@ -2,6 +2,7 @@ import React from 'react';
 import { Section, Container, SectionHeading } from '../ui/Section';
 import { Reveal } from '../ui/Reveal';
 import { BulletList } from '../ui/BulletList';
+import { GetStartedCTA } from '../ui/GetStartedCTA';
 import { screenFor, screenEarly, howItWorks } from '../../data/preschool';
 import preschoolScreener1 from '../../../assets/preschool-screeners-1.png';
 import preschoolScreener3 from '../../../assets/preschool-screeners-3.png';
@@ -130,6 +131,13 @@ const PreeschoolSection: React.FC = () => (
           </ul>
           Cost is $190 per hour (enquire via email)
         </p>
+      </Reveal>
+
+      <Reveal>
+        <GetStartedCTA
+          heading="Ready to get started?"
+          body="Get in touch to book a preschool screening session or ask us anything — we’re here to help."
+        />
       </Reveal>
     </Container>
   </Section>

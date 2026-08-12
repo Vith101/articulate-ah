@@ -11,10 +11,17 @@ export const setLenis = (next: Lenis | null): void => {
   instance = next;
 };
 
-/** Jump to the top of the page, using Lenis when it's active. */
+/**
+ * Glide back to the top of the page. Uses Lenis for a smooth, eased scroll on
+ * route changes; falls back to an instant jump when Lenis is inactive
+ * (e.g. visitors who prefer reduced motion).
+ */
 export const scrollToTop = (): void => {
   if (instance) {
-    instance.scrollTo(0, { immediate: true });
+    instance.scrollTo(0, {
+      duration: 0.9,
+      easing: (t) => 1 - Math.pow(1 - t, 3),
+    });
   } else {
     window.scrollTo(0, 0);
   }
