@@ -1,5 +1,4 @@
 import React from 'react';
-import { ContactLink } from '../ui/ContactLink';
 
 const CareersSection: React.FC = () => (
   <section id="careers" className="py-10 bg-pink-100 h-full">
@@ -40,9 +39,12 @@ const CareersSection: React.FC = () => (
       </p>
       <p className="text-lg leading-relaxed">
         <strong>
-          <ContactLink className="text-pink-900 font-semibold underline underline-offset-2 hover:text-pink-700">
+          <a
+            href="mailto:info@articulateah.com.au"
+            className="text-pink-900 font-semibold underline underline-offset-2 hover:text-pink-700"
+          >
             Contact the Articulate Allied Health team
-          </ContactLink>{' '}
+          </a>{' '}
           to start a conversation about opportunities to work with us.
         </strong>
       </p>
